@@ -16,8 +16,7 @@ esac
 
 dir="https://download.litecoin.org/litecoin-${version}/"
 
-gpg --import thrasher-release.asc 
-
+gpg --import thrasher-releases.asc 
 
 curl -sko "SHA256SUMS.asc" "$dir/SHA256SUMS.asc"
 curl -sko "$archive" "$dir/$archive"
