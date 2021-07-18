@@ -5,13 +5,13 @@ architecture=`uname -m`
 
 case $architecture in
 aarch64)
-  archive="linux/litecoin-${version}-aarch64-linux-gnu.tar.gz"
+  archive="litecoin-${version}-aarch64-linux-gnu.tar.gz"
   ;;
 armv7l)
-  archive="linux/litecoin-${version}-arm-linux-gnueabihf.tar.gz"
+  archive="litecoin-${version}-arm-linux-gnueabihf.tar.gz"
   ;;
 x86_64)
-  archive="linux/litecoin-${version}-x86_64-linux-gnu.tar.gz"
+  archive="litecoin-${version}-x86_64-linux-gnu.tar.gz"
 esac
 
 dir="https://download.litecoin.org/litecoin-${version}/"
