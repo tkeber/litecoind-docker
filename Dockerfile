@@ -17,6 +17,7 @@ USER litecoin
 # Switch to home directory and install newly built binary
 WORKDIR /home/litecoin
 COPY --chown=litecoin:litecoin $BINARY /usr/local/bin/litecoind
+COPY --chown=bitcoin:bitcoin --from=downloader /usr/local/bin/litecoind /usr/local/bin/litecoind
 
 # Expose p2p and restricted RPC ports
 EXPOSE 8332
