@@ -19,7 +19,7 @@ dir="https://download.litecoin.org/litecoin-${version}/"
 gpg --import thrasher-releases.asc 
 
 curl -sko "SHA256SUMS.asc" "$dir/SHA256SUMS.asc"
-curl -sko "$archive" "$dir/$archive"
+curl -sko "$archive" "$dir/linux/$archive"
 
 gpg --verify SHA256SUMS.asc
 
