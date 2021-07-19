@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: litecoin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: litecoin
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: litecoin
+    spec:
+      containers:
+      - args:
+        - --datadir=/var/data
+        image: tkeber/litecoind-docker:0.18.1
+        imagePullPolicy: IfNotPresent
+        name: litecoin
+        volumeMounts:
+        - mountPath: /var/data
+          name: data
+      tolerations: []
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: litecoin
