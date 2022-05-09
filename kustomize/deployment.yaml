@@ -17,7 +17,7 @@ spec:
       containers:
       - args:
         - --datadir=/var/data
-        image: tkeber/litecoind-docker:0.18.1
+        image: tkeber/litecoind-docker:0.21.2
         imagePullPolicy: IfNotPresent
         name: litecoin
         volumeMounts:
